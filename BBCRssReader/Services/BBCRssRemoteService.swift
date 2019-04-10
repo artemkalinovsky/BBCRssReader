@@ -32,7 +32,8 @@ final class BBCRssRemoteService: RssRemoteService {
                             }
                             let xml = SWXMLHash.parse(responseData)
                             let allItems = xml["rss"]["channel"]["item"].all
-                            completion(allItems.compactMap { self?.rssItemFactory.createRssItem(from: $0) }, nil)
+                            let rssNewsItems = allItems.compactMap { self?.rssItemFactory.createRssItem(from: $0) }
+                            completion(rssNewsItems, nil)
         }
     }
 }

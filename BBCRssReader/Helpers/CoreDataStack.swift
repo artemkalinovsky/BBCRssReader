@@ -31,7 +31,7 @@ final class CoreDataStack {
 
     lazy var writeContext: NSManagedObjectContext = {
         let writeContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
-        writeContext.parent = viewContext
+        writeContext.parent = self.viewContext
         return writeContext
     }()
 

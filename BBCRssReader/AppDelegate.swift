@@ -6,7 +6,9 @@
 //  Copyright © 2019 DataArt. All rights reserved.
 //
 
-import UIKit
+import ReSwift
+
+let store = Store<AppState>(reducer: appReducer, state: nil)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

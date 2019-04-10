@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (4.8.2)
+  - ReSwift (4.1.1)
   - SWXMLHash (4.9.0)
 
 DEPENDENCIES:
   - Alamofire
+  - ReSwift
   - SWXMLHash
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - ReSwift
     - SWXMLHash
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  ReSwift: d925be0033558f55bd73d92869961230dfe19d52
   SWXMLHash: 87b0006848a548b7f9485b40bc71721b3ae39add
 
-PODFILE CHECKSUM: 5a63020336f2f8973a06f9c1facea428ecf53e7a
+PODFILE CHECKSUM: e88264d6a4af790986b497c5f963d793576536ac
 
 COCOAPODS: 1.6.1

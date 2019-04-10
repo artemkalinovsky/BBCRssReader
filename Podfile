@@ -5,7 +5,8 @@ target 'BBCRssReader' do
 
   pod 'Alamofire'
   pod 'SWXMLHash'
-
+  pod 'ReSwift'
+  
   target 'BBCRssReaderTests' do
     inherit! :search_paths
   end
