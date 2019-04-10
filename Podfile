@@ -4,6 +4,7 @@ target 'BBCRssReader' do
   use_frameworks!
 
   pod 'Alamofire'
+  pod 'SWXMLHash'
 
   target 'BBCRssReaderTests' do
     inherit! :search_paths

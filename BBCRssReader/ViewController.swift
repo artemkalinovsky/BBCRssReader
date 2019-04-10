@@ -10,9 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+
+//    let remoteService = BBCRssRemoteService()
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+//        remoteService.fetchRss { _, _ in }
     }
 
 
