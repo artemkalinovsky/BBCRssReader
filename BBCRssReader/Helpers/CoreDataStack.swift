@@ -45,7 +45,7 @@ final class CoreDataStack {
         return container
     }()
 
-    func fetch<T: NSManagedObject>() -> [T]? {
+    func fetch<T: NSManagedObject>(_ type: T.Type) -> [T]? {
         return try? viewContext.fetch(T.fetchRequest()) as? [T]
     }
 

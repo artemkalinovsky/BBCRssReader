@@ -18,6 +18,6 @@ struct RssServicesState: StateType {
         let coreDataStack = CoreDataStack(modelName: "BBCRssReaderCoreDataModel")
         self.coreDataStack = coreDataStack
         self.rssRemoteService = BBCRssRemoteService(rssItemFactory: RssItemFactory(coreDataStack: coreDataStack))
-        self.rssLocalService = BBCRssLocalService()
+        self.rssLocalService = BBCRssLocalService(coreDataStack: coreDataStack)
     }
 }
