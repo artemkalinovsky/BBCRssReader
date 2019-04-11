@@ -5,6 +5,7 @@ target 'BBCRssReader' do
 
   pod 'Alamofire'
   pod 'SWXMLHash'
+  pod 'Kingfisher'
   pod 'ReSwift'
   
   target 'BBCRssReaderTests' do
