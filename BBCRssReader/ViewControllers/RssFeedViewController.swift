@@ -57,7 +57,9 @@ final class RssFeedViewController: UIViewController {
 extension RssFeedViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        store.dispatch(RoutingAction(destination: .rssItemDetails))
+        guard let displayedModels = tableDataSource?.models else { return }
+        store.dispatch(RoutingAction(destination: .rssItemDetails,
+                                     detailedRssNewsFeedItem: displayedModels[indexPath.row]))
     }
 
 }

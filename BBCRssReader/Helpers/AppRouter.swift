@@ -23,9 +23,8 @@ final class AppRouter {
         }
     }
 
-    fileprivate func pushViewController(identifier: String, animated: Bool) {
+    fileprivate func push(viewController: UIViewController, animated: Bool) {
         guard let navigationController = (getVisibleViewController() as? UITabBarController)?.selectedViewController as? UINavigationController else { return }
-        let viewController = instantiateViewController(identifier: identifier)
         let newViewControllerType = type(of: viewController)
         if let currentVc = navigationController.topViewController {
             let currentViewControllerType = type(of: currentVc)
@@ -59,11 +58,16 @@ final class AppRouter {
 }
 
 // MARK: - StoreSubscriber
+
 extension AppRouter: StoreSubscriber {
     typealias StoreSubscriberStateType = RoutingState
 
     func newState(state: RoutingState) {
-        pushViewController(identifier: state.navigationState.rawValue, animated: true)
+//        if state.navigationState == .rssItemDetails,
+//            let rssFeedItemDetailsViewController = instantiateViewController(identifier: state.navigationState.rawValue) as? RssFeedItemDetailsViewController {
+//        }
+        let viewController = instantiateViewController(identifier: state.navigationState.rawValue)
+        push(viewController: viewController, animated: true)
     }
 }
 

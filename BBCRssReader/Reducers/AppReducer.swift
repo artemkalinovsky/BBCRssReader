@@ -9,7 +9,8 @@
 import ReSwift
 
 func appReducer(action: Action, state: AppState?) -> AppState {
-    return AppState(rssServicesState: rssServicesResucer(action: action, state: state?.rssServicesState),
+    return AppState(rssServicesState: rssServicesReducer(action: action, state: state?.rssServicesState),
                     routingState: routingReducer(action: action, state: state?.routingState),
-                    rssFeedState: rssFeedReducer(action: action, state: state?.rssFeedState))
+                    rssFeedState: rssFeedReducer(action: action, state: state?.rssFeedState),
+                    rssFeedItemDetailsState: rssFeedItemDetailsReducer(action: action, state: state?.rssFeedItemDetailsState))
 }

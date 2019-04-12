@@ -12,4 +12,5 @@ struct AppState: StateType {
     let rssServicesState: RssServicesState
     let routingState: RoutingState
     let rssFeedState: RssFeedState
+    let rssFeedItemDetailsState: RssFeedItemDetailsState
 }

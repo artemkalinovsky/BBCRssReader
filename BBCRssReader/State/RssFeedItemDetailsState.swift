@@ -1,5 +1,5 @@
 //
-//  RoutingAction.swift
+//  RssFeedItemDetailsState.swift
 //  BBCRssReader
 //
 //  Created by Artem Kalinovsky on 4/12/19.
@@ -8,8 +8,7 @@
 
 import ReSwift
 
-struct RoutingAction: Action {
-    let destination: RoutingDestination
-    let detailedRssNewsFeedItem: RssNewsItem?
+struct RssFeedItemDetailsState: StateType {
+    var rssItem: RssNewsItem?
 }
 

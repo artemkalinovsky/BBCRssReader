@@ -8,6 +8,6 @@
 
 import ReSwift
 
-func rssServicesResucer(action: Action, state: RssServicesState?) -> RssServicesState {
+func rssServicesReducer(action: Action, state: RssServicesState?) -> RssServicesState {
     return state ?? RssServicesState()
 }

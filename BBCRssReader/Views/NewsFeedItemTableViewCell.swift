@@ -17,7 +17,7 @@ final class NewsFeedItemTableViewCell: UITableViewCell, BaseCellProtocol {
 
     func configure(with rssNewsItem: RssNewsItem) {
         newsTitleLabel.text = rssNewsItem.title
-        newsSummaryLabel.text = rssNewsItem.summary
+        newsSummaryLabel.text = rssNewsItem.summary?.trunc(length: 60)
         newsItemImageView.kf.setImage(with: rssNewsItem.mediaUrl)
     }
     

@@ -63,19 +63,19 @@
                                                         <constraint firstAttribute="height" constant="85" id="CDD-KJ-X9y"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZM-tX-rQV">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZM-tX-rQV">
                                                     <rect key="frame" x="101" y="16" width="170" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="mct-0L-a1G"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="mct-0L-a1G"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCJ-6N-evM">
-                                                    <rect key="frame" x="101" y="45" width="178" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label fjsdkfj j fjlsdfj fjksdf klsdjf fjaskdlfj sad" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCJ-6N-evM">
+                                                    <rect key="frame" x="101" y="45" width="178" height="42"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="w62-eX-JKG"/>
+                                                        <constraint firstAttribute="height" constant="42" id="w62-eX-JKG"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
@@ -128,10 +128,10 @@
             </objects>
             <point key="canvasLocation" x="1839" y="27"/>
         </scene>
-        <!--View Controller-->
+        <!--Rss Feed Item Details View Controller-->
         <scene sceneID="ohu-Td-1bO">
             <objects>
-                <viewController storyboardIdentifier="RssItemDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Jvj-u6-zbV" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RssItemDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Jvj-u6-zbV" customClass="RssFeedItemDetailsViewController" customModule="BBCRssReader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hcB-JN-64J">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -189,6 +189,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qe0-Le-yvg"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="rgk-uL-ASs" id="K6r-O0-QH4"/>
+                        <outlet property="summaryLabel" destination="hrq-wa-Lke" id="U9B-wq-zhV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pWQ-Ou-Mzx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
