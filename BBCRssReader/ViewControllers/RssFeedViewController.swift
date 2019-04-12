@@ -52,6 +52,16 @@ final class RssFeedViewController: UIViewController {
 
 }
 
+// MARK: - UITableViewDelegate
+
+extension RssFeedViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        store.dispatch(RoutingAction(destination: .rssItemDetails))
+    }
+
+}
+
 // MARK: - StoreSubscriber
 
 extension RssFeedViewController: StoreSubscriber {
@@ -61,7 +71,9 @@ extension RssFeedViewController: StoreSubscriber {
             refreshControl.endRefreshing()
         }
         loadingView.isHidden = !state.showLoading
-        tableDataSource?.models = state.rssItems
+        if !state.rssItems.isEmpty {
+            tableDataSource?.models = state.rssItems.sorted { $0.publishDate ?? Date() > $1.publishDate ?? Date() }
+        }
         tableView.isHidden = state.showLoading
         tableView.reloadData()
     }

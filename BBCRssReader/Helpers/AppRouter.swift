@@ -15,11 +15,7 @@ enum RoutingDestination: String {
 
 final class AppRouter {
 
-    let navigationController: UINavigationController
-
-    init(window: UIWindow) {
-        navigationController = UINavigationController()
-        window.rootViewController = navigationController
+    init() {
         store.subscribe(self) {
             $0.select {
                 $0.routingState
@@ -28,6 +24,7 @@ final class AppRouter {
     }
 
     fileprivate func pushViewController(identifier: String, animated: Bool) {
+        guard let navigationController = (getVisibleViewController() as? UITabBarController)?.selectedViewController as? UINavigationController else { return }
         let viewController = instantiateViewController(identifier: identifier)
         let newViewControllerType = type(of: viewController)
         if let currentVc = navigationController.topViewController {
@@ -36,7 +33,6 @@ final class AppRouter {
                 return
             }
         }
-
         navigationController.pushViewController(viewController, animated: animated)
     }
 
@@ -44,15 +40,30 @@ final class AppRouter {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: identifier)
     }
+
+    private func getVisibleViewController(_ rootViewController: UIViewController? = nil) -> UIViewController? {
+        let rootVC = rootViewController ?? UIApplication.shared.keyWindow?.rootViewController
+        guard let presentedViewController = rootVC?.presentedViewController else {
+            return rootVC
+        }
+        if let navigationController = presentedViewController as? UINavigationController,
+            let lastViewController = navigationController.viewControllers.last {
+            return lastViewController
+        }
+        if let tabBarController = presentedViewController as? UITabBarController,
+            let selectedViewController = tabBarController.selectedViewController {
+            return selectedViewController
+        }
+        return getVisibleViewController(presentedViewController)
+    }
 }
 
 // MARK: - StoreSubscriber
 extension AppRouter: StoreSubscriber {
     typealias StoreSubscriberStateType = RoutingState
 
-    func newState(state: StoreSubscriberStateType) {
-        let shouldAnimate = navigationController.topViewController != nil
-        pushViewController(identifier: state.navigationState.rawValue, animated: shouldAnimate)
+    func newState(state: RoutingState) {
+        pushViewController(identifier: state.navigationState.rawValue, animated: true)
     }
 }
 
