@@ -8,6 +8,7 @@
 
 import ReSwift
 import Kingfisher
+import SafariServices
 
 final class RssFeedItemDetailsViewController: UIViewController {
 
@@ -33,6 +34,13 @@ final class RssFeedItemDetailsViewController: UIViewController {
         store.unsubscribe(self)
     }
     
+    @IBAction private func actionBarButtonItemPressed(_ sender: UIBarButtonItem) {
+        guard let url = store.state.rssFeedItemDetailsState.rssItem?.url else { return }
+        let safariViewController = SFSafariViewController(url: url)
+        safariViewController.delegate = self
+        present(safariViewController, animated: true)
+    }
+
 }
 
 // MARK: - StoreSubscriber
@@ -43,6 +51,16 @@ extension RssFeedItemDetailsViewController: StoreSubscriber {
         title = state.rssItem?.title
         imageView.kf.setImage(with: state.rssItem?.mediaUrl)
         summaryLabel.text = state.rssItem?.summary
+    }
+
+}
+
+// MARK: - SFSafariViewControllerDelegate
+
+extension RssFeedItemDetailsViewController: SFSafariViewControllerDelegate {
+
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        controller.dismiss(animated: true)
     }
 
 }

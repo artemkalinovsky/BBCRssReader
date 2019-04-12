@@ -137,7 +137,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SUR-Jg-6dW">
-                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="411"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xAi-5W-5C0">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -189,6 +189,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qe0-Le-yvg"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="XJF-xy-CjQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="iBj-xh-HXo">
+                            <connections>
+                                <action selector="actionBarButtonItemPressed:" destination="Jvj-u6-zbV" id="pte-xr-wSB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="imageView" destination="rgk-uL-ASs" id="K6r-O0-QH4"/>
                         <outlet property="summaryLabel" destination="hrq-wa-Lke" id="U9B-wq-zhV"/>
