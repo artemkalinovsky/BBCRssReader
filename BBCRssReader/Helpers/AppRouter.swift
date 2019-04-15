@@ -27,7 +27,7 @@ final class AppRouter {
     }
 
     private func push(viewController: UIViewController, animated: Bool) {
-        guard let navigationController = (getVisibleViewController() as? UITabBarController)?.selectedViewController as? UINavigationController else { return }
+        guard let navigationController = getVisibleViewController() as? UINavigationController else { return }
         let newViewControllerType = type(of: viewController)
         if let currentVc = navigationController.topViewController {
             let currentViewControllerType = type(of: currentVc)
@@ -40,7 +40,7 @@ final class AppRouter {
 
     private func present(viewController: UIViewController, animated: Bool) {
         guard !isPresentingInProgress,
-            let navigationController = (getVisibleViewController() as? UITabBarController)?.selectedViewController as? UINavigationController else { return }
+            let navigationController = getVisibleViewController() as? UINavigationController else { return }
         isPresentingInProgress = true
         navigationController.topViewController?.present(viewController, animated: animated) { [weak self] in
             self?.isPresentingInProgress = false
