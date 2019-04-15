@@ -10,13 +10,19 @@ import ReSwift
 
 func rssFeedReducer(action: Action, state: RssFeedState?) -> RssFeedState {
     var state = state ?? RssFeedState(rssItems: [], showLoading: false)
-    switch(action) {
-    case _ as FetchRssFeedAction:
-        state = RssFeedState(rssItems: [], showLoading: true)
-    case let setRssFeedAction as SetRssFeedAction:
-        state.rssItems = setRssFeedAction.rssFeedItems
+
+    guard let rssFeedAction = action as? RssFeedAction else {
+        return state
+    }
+
+    switch rssFeedAction {
+    case .fetch, .set(.loading):
+         state = RssFeedState(rssItems: [], showLoading: true)
+    case .set( .value(let rssItems)):
+        state.rssItems = rssItems
         state.showLoading = false
     default: break
     }
+
     return state
 }

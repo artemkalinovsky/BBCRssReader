@@ -30,7 +30,7 @@ final class RssFeedViewController: UIViewController {
         tableView.dataSource = tableDataSource
         tableView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(refreshCartItems), for: .valueChanged)
-        store.dispatch(fetchRssFeed)
+        store.dispatch(RssFeedAction.fetch)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -48,7 +48,7 @@ final class RssFeedViewController: UIViewController {
     }
 
     @objc private func refreshCartItems() {
-        store.dispatch(fetchRssFeed)
+        store.dispatch(RssFeedAction.fetch)
     }
 
 }
