@@ -10,6 +10,66 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Zoomed Image View Controller-->
+        <scene sceneID="eCS-CU-TKx">
+            <objects>
+                <viewController storyboardIdentifier="ZoomedImageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="I2t-AY-UIc" customClass="ZoomedImageViewController" customModule="BBCRssReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x4p-Ft-b7P">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="10" translatesAutoresizingMaskIntoConstraints="NO" id="raG-hy-Pyy">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4FL-DZ-IE2">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="4FL-DZ-IE2" firstAttribute="leading" secondItem="raG-hy-Pyy" secondAttribute="leading" id="Bmr-fO-Sgf"/>
+                                    <constraint firstItem="4FL-DZ-IE2" firstAttribute="top" secondItem="raG-hy-Pyy" secondAttribute="top" id="EM5-UA-Ez0"/>
+                                    <constraint firstAttribute="bottom" secondItem="4FL-DZ-IE2" secondAttribute="bottom" id="VFR-Ld-hve"/>
+                                    <constraint firstAttribute="trailing" secondItem="4FL-DZ-IE2" secondAttribute="trailing" id="xtS-FY-azx"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="I2t-AY-UIc" id="bAH-5F-Esg"/>
+                                </connections>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6t-Ed-m0o">
+                                <rect key="frame" x="270" y="26" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="YTC-wf-xr3"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="nFG-s1-q1f"/>
+                                    <constraint firstAttribute="height" constant="44" id="umQ-Hd-viV"/>
+                                    <constraint firstAttribute="width" constant="44" id="waO-6Y-zfC"/>
+                                </constraints>
+                                <state key="normal" title="❎"/>
+                                <connections>
+                                    <action selector="touchUpInsideCloseButton:" destination="I2t-AY-UIc" eventType="touchUpInside" id="ctq-v8-I71"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="c6t-Ed-m0o" firstAttribute="top" secondItem="fkA-nw-S9c" secondAttribute="top" constant="6" id="5KG-5N-grJ"/>
+                            <constraint firstItem="4FL-DZ-IE2" firstAttribute="width" secondItem="x4p-Ft-b7P" secondAttribute="width" id="8sD-PJ-Cjk"/>
+                            <constraint firstItem="raG-hy-Pyy" firstAttribute="top" secondItem="fkA-nw-S9c" secondAttribute="top" id="F2J-WP-kVU"/>
+                            <constraint firstItem="4FL-DZ-IE2" firstAttribute="height" secondItem="x4p-Ft-b7P" secondAttribute="height" id="I6m-DT-tln"/>
+                            <constraint firstItem="fkA-nw-S9c" firstAttribute="trailing" secondItem="c6t-Ed-m0o" secondAttribute="trailing" constant="6" id="NkT-Jo-fjJ"/>
+                            <constraint firstItem="fkA-nw-S9c" firstAttribute="trailing" secondItem="raG-hy-Pyy" secondAttribute="trailing" id="Z13-TL-hLb"/>
+                            <constraint firstItem="fkA-nw-S9c" firstAttribute="bottom" secondItem="raG-hy-Pyy" secondAttribute="bottom" id="dcP-q5-NEy"/>
+                            <constraint firstItem="raG-hy-Pyy" firstAttribute="leading" secondItem="fkA-nw-S9c" secondAttribute="leading" id="jYQ-Ua-zoC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fkA-nw-S9c"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="4FL-DZ-IE2" id="ExG-uh-d0T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZCo-Eb-sLj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1838" y="-701"/>
+        </scene>
         <!--News Feed-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -81,8 +141,17 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wg0-6G-am4">
+                                                    <rect key="frame" x="16" y="16" width="77" height="85"/>
+                                                    <connections>
+                                                        <action selector="touchUpInsideImage:" destination="AuL-h5-o5H" eventType="touchUpInside" id="bXJ-X2-H50"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="wg0-6G-am4" firstAttribute="centerX" secondItem="Dwy-0P-iDe" secondAttribute="centerX" id="134-yP-q4Z"/>
+                                                <constraint firstItem="wg0-6G-am4" firstAttribute="height" secondItem="Dwy-0P-iDe" secondAttribute="height" id="19t-8x-9a6"/>
+                                                <constraint firstItem="wg0-6G-am4" firstAttribute="centerY" secondItem="Dwy-0P-iDe" secondAttribute="centerY" id="9Ne-iI-ea7"/>
                                                 <constraint firstItem="LZM-tX-rQV" firstAttribute="leading" secondItem="Dwy-0P-iDe" secondAttribute="trailing" constant="8" id="IK3-6N-e5B"/>
                                                 <constraint firstAttribute="trailing" secondItem="XCJ-6N-evM" secondAttribute="trailing" constant="8" id="O2R-WI-m97"/>
                                                 <constraint firstItem="Dwy-0P-iDe" firstAttribute="top" secondItem="4AS-6m-vdY" secondAttribute="top" constant="16" id="UGd-cq-9Qm"/>
@@ -90,6 +159,7 @@
                                                 <constraint firstItem="XCJ-6N-evM" firstAttribute="top" secondItem="LZM-tX-rQV" secondAttribute="bottom" constant="8" id="bDA-o1-Yib"/>
                                                 <constraint firstAttribute="trailing" secondItem="LZM-tX-rQV" secondAttribute="trailing" constant="16" id="iDt-CW-2Xv"/>
                                                 <constraint firstItem="Dwy-0P-iDe" firstAttribute="leading" secondItem="4AS-6m-vdY" secondAttribute="leading" constant="16" id="nOA-Hp-z2Q"/>
+                                                <constraint firstItem="wg0-6G-am4" firstAttribute="width" secondItem="Dwy-0P-iDe" secondAttribute="width" id="rxv-4A-dBW"/>
                                                 <constraint firstItem="XCJ-6N-evM" firstAttribute="leading" secondItem="Dwy-0P-iDe" secondAttribute="trailing" constant="8" id="w08-x8-PeK"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="XCJ-6N-evM" secondAttribute="bottom" constant="16" id="wdm-gk-7he"/>
                                             </constraints>
@@ -205,7 +275,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pWQ-Ou-Mzx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2713" y="27"/>
+            <point key="canvasLocation" x="2663" y="26"/>
         </scene>
         <!--News-->
         <scene sceneID="qcZ-o6-KXe">
@@ -240,7 +310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i4V-yI-qo9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1073" y="788"/>
+            <point key="canvasLocation" x="289" y="845"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Znn-vn-mV3">

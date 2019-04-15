@@ -11,9 +11,12 @@ import ReSwift
 enum RoutingDestination: String {
     case rssItemsFeed = "RssItemsFeedViewController"
     case rssItemDetails = "RssItemDetailsViewController"
+    case zoomedImage = "ZoomedImageViewController"
 }
 
 final class AppRouter {
+
+    private var isPresentingInProgress = false
 
     init() {
         store.subscribe(self) {
@@ -23,7 +26,7 @@ final class AppRouter {
         }
     }
 
-    fileprivate func push(viewController: UIViewController, animated: Bool) {
+    private func push(viewController: UIViewController, animated: Bool) {
         guard let navigationController = (getVisibleViewController() as? UITabBarController)?.selectedViewController as? UINavigationController else { return }
         let newViewControllerType = type(of: viewController)
         if let currentVc = navigationController.topViewController {
@@ -33,6 +36,15 @@ final class AppRouter {
             }
         }
         navigationController.pushViewController(viewController, animated: animated)
+    }
+
+    private func present(viewController: UIViewController, animated: Bool) {
+        guard !isPresentingInProgress,
+            let navigationController = (getVisibleViewController() as? UITabBarController)?.selectedViewController as? UINavigationController else { return }
+        isPresentingInProgress = true
+        navigationController.topViewController?.present(viewController, animated: animated) { [weak self] in
+            self?.isPresentingInProgress = false
+        }
     }
 
     private func instantiateViewController(identifier: String) -> UIViewController {
@@ -63,11 +75,13 @@ extension AppRouter: StoreSubscriber {
     typealias StoreSubscriberStateType = RoutingState
 
     func newState(state: RoutingState) {
-//        if state.navigationState == .rssItemDetails,
-//            let rssFeedItemDetailsViewController = instantiateViewController(identifier: state.navigationState.rawValue) as? RssFeedItemDetailsViewController {
-//        }
         let viewController = instantiateViewController(identifier: state.navigationState.rawValue)
-        push(viewController: viewController, animated: true)
+        switch state.navigationState {
+        case .zoomedImage:
+            present(viewController: viewController, animated: true)
+        case .rssItemsFeed, .rssItemDetails:
+            push(viewController: viewController, animated: true)
+        }
     }
 }
 

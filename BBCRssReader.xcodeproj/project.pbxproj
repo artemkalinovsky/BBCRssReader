@@ -48,6 +48,7 @@
 		C8CB98C72260CF3B00443DDD /* RssFeedItemReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CB98C62260CF3B00443DDD /* RssFeedItemReducer.swift */; };
 		C8CB98C92260D08100443DDD /* SetRssFeedItemAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CB98C82260D08100443DDD /* SetRssFeedItemAction.swift */; };
 		C8CB98CC2260DAE200443DDD /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CB98CB2260DAE200443DDD /* String+Extensions.swift */; };
+		C8CB98CE2260E9B300443DDD /* ZoomedImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CB98CD2260E9B300443DDD /* ZoomedImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		C8CB98C62260CF3B00443DDD /* RssFeedItemReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RssFeedItemReducer.swift; sourceTree = "<group>"; };
 		C8CB98C82260D08100443DDD /* SetRssFeedItemAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRssFeedItemAction.swift; sourceTree = "<group>"; };
 		C8CB98CB2260DAE200443DDD /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		C8CB98CD2260E9B300443DDD /* ZoomedImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomedImageViewController.swift; sourceTree = "<group>"; };
 		D662A9CD12B9488ED801B88C /* Pods-BBCRssReaderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBCRssReaderUITests.debug.xcconfig"; path = "Target Support Files/Pods-BBCRssReaderUITests/Pods-BBCRssReaderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DCFA28264F85A8E04B330A62 /* Pods-BBCRssReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBCRssReader.debug.xcconfig"; path = "Target Support Files/Pods-BBCRssReader/Pods-BBCRssReader.debug.xcconfig"; sourceTree = "<group>"; };
 		DE20DAF0ED8AA9B8377DE67E /* Pods-BBCRssReaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBCRssReaderTests.debug.xcconfig"; path = "Target Support Files/Pods-BBCRssReaderTests/Pods-BBCRssReaderTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 			children = (
 				C83E9B32225E2BAE001779E2 /* RssFeedViewController.swift */,
 				C8CB98C22260CD8400443DDD /* RssFeedItemDetailsViewController.swift */,
+				C8CB98CD2260E9B300443DDD /* ZoomedImageViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 				C8254144225CCF83008127C4 /* RssService.swift in Sources */,
 				C8254154225CED03008127C4 /* RssNewsItem+CoreDataProperties.swift in Sources */,
 				C83E9B27225E16A1001779E2 /* RssFeedReducer.swift in Sources */,
+				C8CB98CE2260E9B300443DDD /* ZoomedImageViewController.swift in Sources */,
 				C83E9B2A225E1949001779E2 /* FetchRssFeedAction.swift in Sources */,
 				C83E9B30225E223B001779E2 /* RssServicesReducer.swift in Sources */,
 				C83E9B33225E2BAE001779E2 /* RssFeedViewController.swift in Sources */,

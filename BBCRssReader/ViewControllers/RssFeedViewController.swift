@@ -18,7 +18,8 @@ final class RssFeedViewController: UIViewController {
     private lazy var tableDataSource: TableDataSource<NewsFeedItemTableViewCell, RssNewsItem>? = {
         let dataSource: TableDataSource<NewsFeedItemTableViewCell, RssNewsItem> = TableDataSource(cellIdentifier: NewsFeedItemTableViewCell.id,
                                                                                                   models: []) { cell, rssNewsItem in
-                                                                                                    cell.configure(with: rssNewsItem)
+                                                                                                    cell.configure(with: rssNewsItem,
+                                                                                                                   cellDelegate: self)
                                                                                                     return cell
         }
         return dataSource
@@ -78,6 +79,21 @@ extension RssFeedViewController: StoreSubscriber {
         }
         tableView.isHidden = state.showLoading
         tableView.reloadData()
+    }
+
+}
+
+// MARK: - NewsFeedItemTableViewCellDelegate
+
+extension RssFeedViewController: NewsFeedItemTableViewCellDelegate {
+
+    func newsFeedItemTableViewCellTouchUpInsideImage(_ cell: NewsFeedItemTableViewCell) {
+        guard let displayedModels = tableDataSource?.models,
+            let indexPath = tableView.indexPath(for: cell) else {
+            return
+        }
+        store.dispatch(RoutingAction(destination: .zoomedImage,
+                                     detailedRssNewsFeedItem: displayedModels[indexPath.row]))
     }
 
 }
