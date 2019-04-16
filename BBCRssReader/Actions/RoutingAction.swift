@@ -11,5 +11,10 @@ import ReSwift
 struct RoutingAction: Action {
     let destination: RoutingDestination
     let detailedRssNewsFeedItem: RssNewsItem?
+
+    init(destination: RoutingDestination, detailedRssNewsFeedItem: RssNewsItem? = nil) {
+        self.destination = destination
+        self.detailedRssNewsFeedItem = detailedRssNewsFeedItem
+    }
 }
 
