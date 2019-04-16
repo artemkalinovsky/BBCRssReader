@@ -9,7 +9,7 @@
 import Foundation
 
 protocol RssService {
-    func fetchRss(completion: @escaping ([RssNewsItem]?, Error?) -> Void)
+    func fetchRss(searchString: String?, completion: @escaping ([RssNewsItem]?, Error?) -> Void)
 }
 
 protocol RssRemoteService: RssService {

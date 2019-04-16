@@ -22,7 +22,7 @@ final class BBCRssRemoteService: RssRemoteService {
         self.rssItemFactory = rssItemFactory
     }
 
-    func fetchRss(completion: @escaping ([RssNewsItem]?, Error?) -> Void) {
+    func fetchRss(searchString: String? = nil, completion: @escaping ([RssNewsItem]?, Error?) -> Void) {
         Alamofire.request(sourceUrlLink,
                           method: .get,
                           parameters: nil).response { [weak self] response in

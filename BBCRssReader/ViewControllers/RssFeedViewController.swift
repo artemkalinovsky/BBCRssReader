@@ -28,6 +28,7 @@ final class RssFeedViewController: UIViewController {
     private lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
+        searchController.delegate = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search"
         return searchController
@@ -64,19 +65,28 @@ final class RssFeedViewController: UIViewController {
 
 }
 
+// MARK: - UISearchControllerDelegate
+
+extension RssFeedViewController: UISearchControllerDelegate {
+    
+    func didDismissSearchController(_ searchController: UISearchController) {
+        store.dispatch(RssFeedAction.fetch)
+    }
+    
+}
+
 // MARK: - UISearchResultsUpdating
 
 extension RssFeedViewController: UISearchResultsUpdating {
-
+    
     func updateSearchResults(for searchController: UISearchController) {
         guard let searchBarText = searchController.searchBar.text,
             !searchBarText.isEmpty else {
-                store.dispatch(RssFeedAction.fetch)
                 return
         }
         store.dispatch(RssFeedAction.search(searchBarText))
     }
-
+    
 }
 
 // MARK: - UITableViewDelegate

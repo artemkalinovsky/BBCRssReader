@@ -16,20 +16,36 @@ func fetchRssFeed() -> Middleware {
 
 private func fetchRssFeed(action: Action, context: MiddlewareContext<AppState>) -> Action? {
 
-    guard let rssFeedAction = action as? RssFeedAction,
-        case .fetch = rssFeedAction else {
-            return action
+    guard let rssFeedAction = action as? RssFeedAction else {
+        return action
     }
 
-    context.state?.rssServicesState.rssRemoteService.fetchRss { rssNewsItems, error in
-        var state: Loadable<[RssNewsItem]>
-        if let error = error {
-            state = .error(error)
-        } else {
-            state = .value(rssNewsItems ?? [])
+    switch rssFeedAction {
+    case .fetch:
+        context.state?.rssServicesState.rssRemoteService.fetchRss(searchString: nil) { rssNewsItems, error in
+            var state: Loadable<[RssNewsItem]>
+            if let error = error {
+                state = .error(error)
+            } else {
+                state = .value(rssNewsItems ?? [])
+            }
+            context.state?.rssServicesState.rssLocalService.save()
+            context.dispatch(RssFeedAction.set(state))
         }
-        context.dispatch(RssFeedAction.set(state))
+        return RssFeedAction.set(.loading)
+    case .search(let searchString):
+        context.state?.rssServicesState.rssLocalService.fetchRss(searchString: searchString) { rssNewsItems, error in
+            var state: Loadable<[RssNewsItem]>
+            if let error = error {
+                state = .error(error)
+            } else {
+                state = .value(rssNewsItems ?? [])
+            }
+            context.dispatch(RssFeedAction.set(state))
+        }
+        return nil
+    default:
+        return action
     }
-
-    return RssFeedAction.set(.loading)
 }
+
