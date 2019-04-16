@@ -25,12 +25,22 @@ final class RssFeedViewController: UIViewController {
         return dataSource
     }()
 
+    private lazy var searchController: UISearchController = {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search"
+        return searchController
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
         tableView.dataSource = tableDataSource
         tableView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(refreshCartItems), for: .valueChanged)
-        store.dispatch(RssFeedAction.fetch)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +50,7 @@ final class RssFeedViewController: UIViewController {
                 $0.rssFeedState
             }
         }
+        store.dispatch(RssFeedAction.fetch)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -49,6 +60,21 @@ final class RssFeedViewController: UIViewController {
 
     @objc private func refreshCartItems() {
         store.dispatch(RssFeedAction.fetch)
+    }
+
+}
+
+// MARK: - UISearchResultsUpdating
+
+extension RssFeedViewController: UISearchResultsUpdating {
+
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let searchBarText = searchController.searchBar.text,
+            !searchBarText.isEmpty else {
+                store.dispatch(RssFeedAction.fetch)
+                return
+        }
+        store.dispatch(RssFeedAction.search(searchBarText))
     }
 
 }

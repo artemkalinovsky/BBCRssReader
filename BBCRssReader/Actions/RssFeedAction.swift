@@ -10,5 +10,6 @@ import ReSwift
 
 enum RssFeedAction: Action {
     case fetch
+    case search(String)
     case set(Loadable<[RssNewsItem]>)
 }

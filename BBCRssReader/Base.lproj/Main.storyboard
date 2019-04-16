@@ -106,7 +106,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KT2-36-2nx">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="111" width="320" height="457"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NewsFeedItemTableViewCell" rowHeight="120" id="AuL-h5-o5H" customClass="NewsFeedItemTableViewCell" customModule="BBCRssReader" customModuleProvider="target">
@@ -187,7 +187,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="News Feed" id="i8d-CE-IG0"/>
+                    <navigationItem key="navigationItem" title="News Feed" largeTitleDisplayMode="always" id="i8d-CE-IG0"/>
                     <connections>
                         <outlet property="loadingView" destination="ohx-r0-3dG" id="3fI-Jg-4aS"/>
                         <outlet property="tableView" destination="KT2-36-2nx" id="Ude-cE-HvH"/>
@@ -260,7 +260,7 @@
                         <viewLayoutGuide key="safeArea" id="Qe0-Le-yvg"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="XJF-xy-CjQ">
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="XJF-xy-CjQ">
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="iBj-xh-HXo">
                             <connections>
                                 <action selector="actionBarButtonItemPressed:" destination="Jvj-u6-zbV" id="pte-xr-wSB"/>
@@ -283,8 +283,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rI3-s4-6wc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="News" id="oEr-5Q-K0f"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ygs-4p-lAb">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="ygs-4p-lAb">
+                        <rect key="frame" x="0.0" y="20" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

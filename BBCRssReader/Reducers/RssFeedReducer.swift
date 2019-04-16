@@ -21,6 +21,10 @@ func rssFeedReducer(action: Action, state: RssFeedState?) -> RssFeedState {
     case .set( .value(let rssItems)):
         state.rssItems = rssItems
         state.showLoading = false
+    case .search(let searchQuery):
+        state.rssItems = state.rssItems.filter {
+            ($0.title?.contains(searchQuery) ?? false) || ($0.summary?.contains(searchQuery) ?? false)
+        }
     default: break
     }
 
