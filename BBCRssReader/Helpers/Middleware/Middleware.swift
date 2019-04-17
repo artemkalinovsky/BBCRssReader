@@ -22,19 +22,32 @@ private func fetchRssFeed(action: Action, context: MiddlewareContext<AppState>) 
 
     switch rssFeedAction {
     case .fetch:
-        context.state?.rssServicesState.rssRemoteService.fetchRss(searchString: nil) { rssNewsItems, error in
-            var state: Loadable<[RssNewsItem]>
-            if let error = error {
-                state = .error(error)
-            } else {
-                state = .value(rssNewsItems ?? [])
+        if context.state?.rssServicesState.rssRemoteService.isReachable == true {
+            context.state?.rssServicesState.rssRemoteService.fetchRss(searchString: nil, limit: nil) { rssNewsItems, error in
+                var state: Loadable<[RssNewsItem]>
+                if let error = error {
+                    state = .error(error)
+                } else {
+                    state = .value(rssNewsItems ?? [])
+                }
+                context.state?.rssServicesState.rssLocalService.save()
+                context.dispatch(RssFeedAction.set(state))
             }
-            context.state?.rssServicesState.rssLocalService.save()
-            context.dispatch(RssFeedAction.set(state))
+            return RssFeedAction.set(.loading)
+        } else {
+            context.state?.rssServicesState.rssLocalService.fetchRss(searchString: nil, limit: 60) { rssNewsItems, error in
+                var state: Loadable<[RssNewsItem]>
+                if let error = error {
+                    state = .error(error)
+                } else {
+                    state = .value(rssNewsItems ?? [])
+                }
+                context.dispatch(RssFeedAction.set(state))
+            }
+            return nil
         }
-        return RssFeedAction.set(.loading)
     case .search(let searchString):
-        context.state?.rssServicesState.rssLocalService.fetchRss(searchString: searchString) { rssNewsItems, error in
+        context.state?.rssServicesState.rssLocalService.fetchRss(searchString: searchString, limit: nil) { rssNewsItems, error in
             var state: Loadable<[RssNewsItem]>
             if let error = error {
                 state = .error(error)

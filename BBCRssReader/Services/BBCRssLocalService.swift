@@ -20,12 +20,12 @@ final class BBCRssLocalService: RssLocalService {
         coreDataStack.save()
     }
 
-    func fetchRss(searchString: String? = nil, completion: @escaping ([RssNewsItem]?, Error?) -> Void) {
+    func fetchRss(searchString: String? = nil, limit: Int? = nil, completion: @escaping ([RssNewsItem]?, Error?) -> Void) {
         var predicate: NSPredicate? = nil
         if let searchString = searchString {
             predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchString)
         }
-        completion(coreDataStack.fetch(RssNewsItem.self, predicate: predicate), nil)
+        completion(coreDataStack.fetch(RssNewsItem.self, predicate: predicate, fetchBatchSize: limit), nil)
     }
 
 }

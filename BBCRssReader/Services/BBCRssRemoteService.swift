@@ -16,13 +16,17 @@ final class BBCRssRemoteService: RssRemoteService {
         return "http://feeds.bbci.co.uk/news/rss.xml"
     }
 
+    var isReachable: Bool {
+        return NetworkReachabilityManager()?.isReachable ?? false
+    }
+
     private let rssItemFactory: RssItemFactory
 
     init(rssItemFactory: RssItemFactory) {
         self.rssItemFactory = rssItemFactory
     }
 
-    func fetchRss(searchString: String? = nil, completion: @escaping ([RssNewsItem]?, Error?) -> Void) {
+    func fetchRss(searchString: String? = nil, limit: Int? = nil, completion: @escaping ([RssNewsItem]?, Error?) -> Void) {
         Alamofire.request(sourceUrlLink,
                           method: .get,
                           parameters: nil).response { [weak self] response in

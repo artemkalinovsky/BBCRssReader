@@ -11,10 +11,25 @@ import CoreData
 
 final class CoreDataStack {
 
-    private let modelName: String
+    enum PersistentStoreType {
+        case inMemory, sqlite
 
-    init(modelName: String) {
+        var coreDataIdentifier: String {
+            switch self {
+            case .inMemory:
+                return NSInMemoryStoreType
+            case .sqlite:
+                return NSSQLiteStoreType
+            }
+        }
+    }
+
+    private let modelName: String
+    private let persistentStoreType: PersistentStoreType
+
+    init(modelName: String, persistentStoreType: PersistentStoreType = .sqlite) {
         self.modelName = modelName
+        self.persistentStoreType = persistentStoreType
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(writeContextDidSave(notification:)),
                                                name: .NSManagedObjectContextDidSave,
@@ -37,6 +52,11 @@ final class CoreDataStack {
 
     private lazy var storeContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: self.modelName)
+        if self.persistentStoreType == .inMemory {
+            let persistentStoreDescription = NSPersistentStoreDescription()
+            persistentStoreDescription.type = self.persistentStoreType.coreDataIdentifier
+            container.persistentStoreDescriptions = [persistentStoreDescription]
+        }
         container.loadPersistentStores { (storeDescription, error) in
             if let error = error as NSError? {
                 print("Unresolved error \(error), \(error.userInfo)")
@@ -46,9 +66,15 @@ final class CoreDataStack {
     }()
 
     func fetch<T: NSManagedObject>(_ type: T.Type, predicate: NSPredicate? = nil) -> [T]? {
+    func fetch<T: NSManagedObject>(_ type: T.Type,
+                                   predicate: NSPredicate? = nil,
+                                   fetchBatchSize: Int? = nil) -> [T]? {
         let fetchRequest = T.fetchRequest()
         fetchRequest.predicate = predicate
-        return try? viewContext.fetch(fetchRequest) as? [T]
+            fetchRequest.fetchBatchSize = fetchBatchSize
+        }
+        let feched = try? viewContext.fetch(fetchRequest)
+        return feched as? [T]
     }
 
     func save() {
@@ -59,5 +85,6 @@ final class CoreDataStack {
 
     @objc private func writeContextDidSave(notification: Notification) {
         viewContext.mergeChanges(fromContextDidSave: notification)
+        try? viewContext.save()
     }
 }
