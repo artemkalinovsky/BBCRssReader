@@ -12,6 +12,7 @@ enum RoutingDestination: String {
     case rssItemsFeed = "RssItemsFeedViewController"
     case rssItemDetails = "RssItemDetailsViewController"
     case zoomedImage = "ZoomedImageViewController"
+    case safariViewController = "SFSafariViewController"
 }
 
 final class AppRouter {
@@ -75,12 +76,15 @@ extension AppRouter: StoreSubscriber {
     typealias StoreSubscriberStateType = RoutingState
 
     func newState(state: RoutingState) {
+        guard state.navigationState != .safariViewController else { return }
         let viewController = instantiateViewController(identifier: state.navigationState.rawValue)
         switch state.navigationState {
         case .zoomedImage:
             present(viewController: viewController, animated: true)
         case .rssItemsFeed, .rssItemDetails:
             push(viewController: viewController, animated: true)
+        default:
+            return
         }
     }
 }

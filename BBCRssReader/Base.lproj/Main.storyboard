@@ -35,7 +35,7 @@
                                     <outlet property="delegate" destination="I2t-AY-UIc" id="bAH-5F-Esg"/>
                                 </connections>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6t-Ed-m0o">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6t-Ed-m0o">
                                 <rect key="frame" x="270" y="26" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="YTC-wf-xr3"/>
@@ -43,7 +43,7 @@
                                     <constraint firstAttribute="height" constant="44" id="umQ-Hd-viV"/>
                                     <constraint firstAttribute="width" constant="44" id="waO-6Y-zfC"/>
                                 </constraints>
-                                <state key="normal" title="❎"/>
+                                <state key="normal" title="Done"/>
                                 <connections>
                                     <action selector="touchUpInsideCloseButton:" destination="I2t-AY-UIc" eventType="touchUpInside" id="ctq-v8-I71"/>
                                 </connections>

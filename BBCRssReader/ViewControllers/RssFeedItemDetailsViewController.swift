@@ -59,8 +59,14 @@ extension RssFeedItemDetailsViewController: StoreSubscriber {
 
 extension RssFeedItemDetailsViewController: SFSafariViewControllerDelegate {
 
+    func safariViewController(_ controller: SFSafariViewController,
+                              didCompleteInitialLoad didLoadSuccessfully: Bool) {
+        store.dispatch(RoutingAction(destination: .safariViewController))
+    }
+
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
         controller.dismiss(animated: true)
+        store.dispatch(RoutingAction(destination: .rssItemDetails))
     }
 
 }
