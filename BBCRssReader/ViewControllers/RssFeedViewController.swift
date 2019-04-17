@@ -46,6 +46,7 @@ final class RssFeedViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        store.dispatch(RoutingAction(destination: .rssItemsFeed))
         store.subscribe(self) {
             $0.select {
                 $0.rssFeedState
