@@ -70,7 +70,35 @@ class CoreDataStackTests: XCTestCase {
         rssNewsItem.summary = "Test Summary"
 
         coreDataStack?.save()
-        
+
+        waitForExpectations(timeout: 5.0) { error in
+            XCTAssertNil(error, "Save did not occur")
+        }
+    }
+
+    func testFetchAllRssNewsFeedItems() {
+        guard let writeContext = coreDataStack?.writeContext else {
+            XCTFail("Write ManagaedObjectContext should not be nil.")
+            return
+        }
+        guard let viewContext = coreDataStack?.viewContext else {
+            XCTFail("View ManagaedObjectContext should not be nil.")
+            return
+        }
+
+        let rssNewsItem = RssNewsItem(context: writeContext)
+        rssNewsItem.title = "Test Title"
+        rssNewsItem.summary = "Test Summary"
+
+        expectation(forNotification: .NSManagedObjectContextDidSave,
+                    object: viewContext) { [weak self] (notification) -> Bool in
+                        let allRssNewsFeedItems = self?.coreDataStack?.fetch(RssNewsItem.self) ?? []
+                        XCTAssertTrue(allRssNewsFeedItems.count == 1)
+                        return true
+        }
+
+        coreDataStack?.save()
+
         waitForExpectations(timeout: 5.0) { error in
             XCTAssertNil(error, "Save did not occur")
         }
