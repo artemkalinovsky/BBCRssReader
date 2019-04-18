@@ -49,4 +49,31 @@ class CoreDataStackTests: XCTestCase {
         XCTAssertTrue(rssNewsItem.mediaUrl == testUrl)
     }
 
+    func testViewContextIsSavedAfterAddingNewRssNewsItem() {
+        guard let writeContext = coreDataStack?.writeContext else {
+            XCTFail("Write ManagaedObjectContext should not be nil.")
+            return
+        }
+
+        guard let viewContext = coreDataStack?.viewContext else {
+             XCTFail("View ManagaedObjectContext should not be nil.")
+            return
+        }
+
+        expectation(forNotification: .NSManagedObjectContextDidSave,
+                    object: viewContext) { (notification) -> Bool in
+                        return true
+        }
+
+        let rssNewsItem = RssNewsItem(context: writeContext)
+        rssNewsItem.title = "Test Title"
+        rssNewsItem.summary = "Test Summary"
+
+        coreDataStack?.save()
+        
+        waitForExpectations(timeout: 5.0) { error in
+            XCTAssertNil(error, "Save did not occur")
+        }
+    }
+
 }
