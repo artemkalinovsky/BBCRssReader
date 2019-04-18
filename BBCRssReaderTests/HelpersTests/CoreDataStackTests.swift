@@ -9,7 +9,7 @@
 import XCTest
 @testable import BBCRssReader
 
-class CoreDataStackTests: XCTestCase {
+final class CoreDataStackTests: XCTestCase {
 
     var coreDataStack: CoreDataStack?
 

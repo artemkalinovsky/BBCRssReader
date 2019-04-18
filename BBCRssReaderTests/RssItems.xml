@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet title="XSL_formatting" type="text/xsl" href="/shared/bsp/xsl/rss/nolsol.xsl"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+    <channel>
+        <title><![CDATA[BBC News - Home]]></title>
+        <description><![CDATA[BBC News - Home]]></description>
+        <link>https://www.bbc.co.uk/news/</link>
+        <image>
+            <url>https://news.bbcimg.co.uk/nol/shared/img/bbc_news_120x60.gif</url>
+            <title>BBC News - Home</title>
+            <link>https://www.bbc.co.uk/news/</link>
+        </image>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Thu, 18 Apr 2019 11:36:41 GMT</lastBuildDate>
+        <copyright><![CDATA[Copyright: (C) British Broadcasting Corporation, see http://news.bbc.co.uk/2/hi/help/rss/4498287.stm for terms and conditions of reuse.]]></copyright>
+        <language><![CDATA[en-gb]]></language>
+        <ttl>15</ttl>
+        <item>
+            <title><![CDATA[Facebook bans UK far right groups and leaders]]></title>
+            <description><![CDATA[A dozen named groups and individuals will be purged from the social network, it said.]]></description>
+            <link>https://www.bbc.co.uk/news/technology-47974579</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/technology-47974579</guid>
+            <pubDate>Thu, 18 Apr 2019 11:00:52 GMT</pubDate>
+            <media:thumbnail width="898" height="505" url="http://c.files.bbci.co.uk/B90A/production/_106507374_mediaitem106507371.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[T2 Trainspotting actor Bradley Welsh dies after shooting]]></title>
+            <description><![CDATA[Police confirm that the death of Bradley Welsh in Edinburgh's west end is being treated as murder.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-scotland-edinburgh-east-fife-47970758</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-scotland-edinburgh-east-fife-47970758</guid>
+            <pubDate>Thu, 18 Apr 2019 11:22:40 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/13F23/production/_106499618_bradley_welsh_2_shutterstock.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Sophie Gradon: Love Island star took own life]]></title>
+            <description><![CDATA[Former beauty queen Sophie Gradon was found dead by her boyfriend who killed himself days later.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-england-tyne-47933722</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-england-tyne-47933722</guid>
+            <pubDate>Thu, 18 Apr 2019 11:03:18 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/8664/production/_102140443_gradon1_getty.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Mya-Lecia Naylor: CBBC star dies suddenly, aged 16]]></title>
+            <description><![CDATA[The actress appeared in BBC shows Millie Inbetween and Almost Never.]]></description>
+            <link>https://www.bbc.co.uk/news/entertainment-arts-47970854</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/entertainment-arts-47970854</guid>
+            <pubDate>Thu, 18 Apr 2019 00:23:12 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/152AA/production/_106489668_myaln.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Scotland: Alex McLeish exits as head coach after poor start to Euro 2020 qualifying]]></title>
+            <description><![CDATA[Alex McLeish exits as Scotland head coach after the national side's poor start to their Euro 2020 qualifying campaign.]]></description>
+            <link>https://www.bbc.co.uk/sport/football/47767790</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/sport/football/47767790</guid>
+            <pubDate>Thu, 18 Apr 2019 11:05:21 GMT</pubDate>
+            <media:thumbnail width="2048" height="1152" url="http://c.files.bbci.co.uk/ECA8/production/_106248506_sdfgsdfg.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Extinction Rebellion: Charges over climate change train protest]]></title>
+            <description><![CDATA[Three people deny obstructing trains during the Extinction Rebellion protest and are remanded in custody.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-england-london-47974244</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-england-london-47974244</guid>
+            <pubDate>Thu, 18 Apr 2019 10:34:11 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/3515/production/_106498531_pa.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Crossrail 'could be delayed until 2021']]></title>
+            <description><![CDATA[The start date for London's new Elizabeth Line could be pushed back again, sources tell the BBC.]]></description>
+            <link>https://www.bbc.co.uk/news/business-47967766</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/business-47967766</guid>
+            <pubDate>Wed, 17 Apr 2019 23:00:16 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/151F2/production/_103241568_crossrail_getty.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[HIV used to cure 'bubble boy' disease]]></title>
+            <description><![CDATA[All eight infants now have fully functioning immune systems after undergoing treatment, say experts.]]></description>
+            <link>https://www.bbc.co.uk/news/world-us-canada-47969367</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-us-canada-47969367</guid>
+            <pubDate>Wed, 17 Apr 2019 22:33:02 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/11525/production/_106494907_gettyimages-515575698.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Mueller report: Barr accused of helping Donald Trump ahead of release]]></title>
+            <description><![CDATA[There is anger over the US attorney general's plans to hold a news conference before the release.]]></description>
+            <link>https://www.bbc.co.uk/news/world-us-canada-47974261</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-us-canada-47974261</guid>
+            <pubDate>Thu, 18 Apr 2019 10:55:06 GMT</pubDate>
+            <media:thumbnail width="2048" height="1152" url="http://c.files.bbci.co.uk/5654/production/_106500122_mediaitem106500121.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[New York police arrest man with petrol in St Patrick's Cathedral]]></title>
+            <description><![CDATA[Police arrest a man carrying petrol and lighters who entered St Patrick's Cathedral in New York.]]></description>
+            <link>https://www.bbc.co.uk/news/world-us-canada-47973354</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-us-canada-47973354</guid>
+            <pubDate>Thu, 18 Apr 2019 06:54:39 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/EE33/production/_106497906_gettyimages-489648684.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA['My boyfriend's sperm, or a donor's?']]></title>
+            <description><![CDATA["Emma" says it is unfair that she faces a deadline to choose how to fertilise her frozen eggs.]]></description>
+            <link>https://www.bbc.co.uk/news/health-47960605</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/health-47960605</guid>
+            <pubDate>Thu, 18 Apr 2019 07:54:28 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/748F/production/_106493892_p076sgx7.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Thai rescue diver freed from cave]]></title>
+            <description><![CDATA[Josh Bratchley was rescued after being trapped in a flooded cave in the US for 28 hours.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-england-devon-47974354</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-england-devon-47974354</guid>
+            <pubDate>Thu, 18 Apr 2019 07:50:28 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/5653/production/_106499022_hi053476153.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Easter travel 2019: Where to avoid on roads and rail]]></title>
+            <description><![CDATA[Most roadworks have been lifted or completed, but rail passengers are warned to plan ahead.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-england-47894352</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-england-47894352</guid>
+            <pubDate>Thu, 18 Apr 2019 07:43:23 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/C59B/production/_97478505_trafficblurred.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[The Papers: Climate change protests 'cause chaos']]></title>
+            <description><![CDATA[Thursday's papers report on demonstrations across London and the response by police.]]></description>
+            <link>https://www.bbc.co.uk/news/blogs-the-papers-47970894</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/blogs-the-papers-47970894</guid>
+            <pubDate>Thu, 18 Apr 2019 04:41:51 GMT</pubDate>
+            <media:thumbnail width="2048" height="1152" url="http://c.files.bbci.co.uk/44FB/production/_106495671_index.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Attenborough on climate change action]]></title>
+            <description><![CDATA[Sir David Attenborough is back on BBC One presenting a documentary called Climate Change: The Facts]]></description>
+            <link>https://www.bbc.co.uk/news/uk-47972979</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-47972979</guid>
+            <pubDate>Thu, 18 Apr 2019 10:36:06 GMT</pubDate>
+            <media:thumbnail width="1024" height="575" url="http://c.files.bbci.co.uk/36F6/production/_106507041_p076vmf6.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[How this date rape wristband can tell if your drink has been spiked]]></title>
+            <description><![CDATA[25-year-old Kim Eisenmann created it after her friend was drugged and found naked in a city park.]]></description>
+            <link>https://www.bbc.co.uk/news/newsbeat-47973372</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/newsbeat-47973372</guid>
+            <pubDate>Thu, 18 Apr 2019 09:54:39 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/68FF/production/_106497862_wristband976.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Chloë Grace Moretz: 'No age limit' for learning acceptance]]></title>
+            <description><![CDATA[US actress Chloë Grace Moretz on LGBT education and the 'underlying darker tone' of her film career.]]></description>
+            <link>https://www.bbc.co.uk/news/entertainment-arts-47864961</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/entertainment-arts-47864961</guid>
+            <pubDate>Thu, 18 Apr 2019 00:52:36 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/670B/production/_106497362_greta_05037_c.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[The workers juggling careers and caring]]></title>
+            <description><![CDATA[Two women share their stories of juggling senior jobs and being home carers.]]></description>
+            <link>https://www.bbc.co.uk/news/business-47938018</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/business-47938018</guid>
+            <pubDate>Wed, 17 Apr 2019 23:12:31 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/164F3/production/_106497319_p076thr8.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Once destroyed by the Taliban, the Buddha statues live again]]></title>
+            <description><![CDATA[A team of conservators are working to breathe new life into a collection of Buddha statues destroyed by the Taliban]]></description>
+            <link>https://www.bbc.co.uk/news/world-asia-47954950</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-asia-47954950</guid>
+            <pubDate>Wed, 17 Apr 2019 23:18:45 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/5383/production/_106497312_p076tcxc.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Federico Borella scoops first prize in the 2019 Sony World Photography Awards]]></title>
+            <description><![CDATA[A project on Indian farmers helped an Italian man win Photographer of the Year at the Sony awards.]]></description>
+            <link>https://www.bbc.co.uk/news/in-pictures-47866153</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/in-pictures-47866153</guid>
+            <pubDate>Thu, 18 Apr 2019 00:45:25 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/5F95/production/_106496442_1stplace_federicoborellaitaly1stprofessionalcompetitiondocumentary2019sonyworldphotographyawards-4.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[BBC Politics Live]]></title>
+            <description><![CDATA[Live coverage of the day's politics from Westminster.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-politics-24618323</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-politics-24618323</guid>
+            <pubDate>Thu, 21 Jun 2018 11:26:10 GMT</pubDate>
+            <media:thumbnail width="640" height="360" url="http://c.files.bbci.co.uk/118ED/production/_103271917_p06jnvyy-2.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA['The doctor wrote a question mark for my child's sex']]></title>
+            <description><![CDATA[A child known as Baby A became the subject of a high court case that has prompted Kenya to start changing its approach to intersex children.]]></description>
+            <link>https://www.bbc.co.uk/news/stories-47964634</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/stories-47964634</guid>
+            <pubDate>Thu, 18 Apr 2019 00:50:25 GMT</pubDate>
+            <media:thumbnail width="1920" height="1080" url="http://c.files.bbci.co.uk/2B48/production/_106508011_kenya-illustration-1a-1920.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Healthcare for the homeless: 'I probably wouldn't be alive without them']]></title>
+            <description><![CDATA[Life is tough enough for people who are homeless. But who takes care of their health?]]></description>
+            <link>https://www.bbc.co.uk/news/uk-england-birmingham-46946182</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-england-birmingham-46946182</guid>
+            <pubDate>Thu, 18 Apr 2019 00:33:56 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/AB87/production/_106411934_screenshot2019-03-20at19.17.59-2.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Brexit limbo: Hotels, packing boxes and plans on hold for the MEPs]]></title>
+            <description><![CDATA[Their offices are full of boxes, they're living in hotels, and farewell drinks seem a long way off.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-politics-47882021</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-politics-47882021</guid>
+            <pubDate>Thu, 18 Apr 2019 00:51:44 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/4E4F/production/_106474002_meps.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Nusrat Jahan Rafi: Burned to death for reporting sexual harassment]]></title>
+            <description><![CDATA[Nusrat was set on fire after accusing her headmaster of sexual harassment, but spoke out before dying.]]></description>
+            <link>https://www.bbc.co.uk/news/world-asia-47947117</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-asia-47947117</guid>
+            <pubDate>Thu, 18 Apr 2019 01:02:40 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/BB5F/production/_106476974_nusrat.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[New York City congestion charge - what it can learn from London]]></title>
+            <description><![CDATA[The largest city in the US will charge drivers coming into Manhattan, 18 years after London did the same.]]></description>
+            <link>https://www.bbc.co.uk/news/world-us-canada-47874725</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-us-canada-47874725</guid>
+            <pubDate>Wed, 17 Apr 2019 18:34:01 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/79AD/production/_106494113_taxis_976getty.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA['My son killed himself after circumcision']]></title>
+            <description><![CDATA[Why did a young man kill himself two years after being circumcised?]]></description>
+            <link>https://www.bbc.co.uk/news/uk-england-47292307</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-england-47292307</guid>
+            <pubDate>Tue, 16 Apr 2019 23:38:58 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/D010/production/_106346235_alexcanada2.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Ireland captain Best to retire after Rugby World Cup]]></title>
+            <description><![CDATA[Ireland and Ulster captain Rory Best will retire after this year's World Cup in Japan.]]></description>
+            <link>https://www.bbc.co.uk/sport/rugby-union/47974934</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/sport/rugby-union/47974934</guid>
+            <pubDate>Thu, 18 Apr 2019 09:00:12 GMT</pubDate>
+            <media:thumbnail width="2048" height="1152" url="http://c.files.bbci.co.uk/945B/production/_106497973_rory_best_getty.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[BBC Women's Footballer of the Year 2019 shortlist revealed - vote for your favourite]]></title>
+            <description><![CDATA[The shortlist for the BBC Women's Footballer of the Year 2019 is revealed - and you can vote for your favourite.]]></description>
+            <link>https://www.bbc.co.uk/sport/football/47488517</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/sport/football/47488517</guid>
+            <pubDate>Thu, 18 Apr 2019 04:57:36 GMT</pubDate>
+            <media:thumbnail width="2048" height="1152" url="http://c.files.bbci.co.uk/14264/production/_106423528_wofty_sill_landscape_2048x1152.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Joey Barton: Fleetwood Town manager 'emphatically' denies assault allegations]]></title>
+            <description><![CDATA[Fleetwood Town manager Joey Barton says he "emphatically" denies allegations that he assaulted Barnsley boss Daniel Stendel.]]></description>
+            <link>https://www.bbc.co.uk/sport/football/47976276</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/sport/football/47976276</guid>
+            <pubDate>Thu, 18 Apr 2019 10:06:36 GMT</pubDate>
+            <media:thumbnail width="2048" height="1152" url="http://c.files.bbci.co.uk/7F58/production/_106500623_joeyb_reu.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Bedlam, emotion, drama - how do you feel about VAR now?]]></title>
+            <description><![CDATA[The bedlam, the emotion, the drama - did the finish to Man City 4-3 Spurs change the way you feel about VAR?]]></description>
+            <link>https://www.bbc.co.uk/sport/football/47973894</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/sport/football/47973894</guid>
+            <pubDate>Thu, 18 Apr 2019 08:41:33 GMT</pubDate>
+            <media:thumbnail width="2048" height="1152" url="http://c.files.bbci.co.uk/1373F/production/_106497697_pep_guardiola_getty_01.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[GB seek boost from home crowd to end 26-year wait for Fed Cup promotion]]></title>
+            <description><![CDATA[British number one Johanna Konta is counting on the energy from a home crowd when her team bid for Fed Cup promotion this weekend.]]></description>
+            <link>https://www.bbc.co.uk/sport/tennis/47935942</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/sport/tennis/47935942</guid>
+            <pubDate>Thu, 18 Apr 2019 10:02:50 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/10B73/production/_106476486_gettyimages-1128337368.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Notre-Dame fire: Why the cathedral's beauty wins hearts around the world]]></title>
+            <description><![CDATA[The cathedral has come to symbolise the heart of France since it was built 850 years ago.]]></description>
+            <link>https://www.bbc.co.uk/news/world-europe-47960184</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-europe-47960184</guid>
+            <pubDate>Thu, 18 Apr 2019 00:54:58 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/76AC/production/_106508303_gettyimages-629579469.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Is it OK to rebuild a 12th Century monument with titanium?]]></title>
+            <description><![CDATA[Using modern technology to preserve a medieval building is nothing new in France.]]></description>
+            <link>https://www.bbc.co.uk/news/world-europe-47971914</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-europe-47971914</guid>
+            <pubDate>Thu, 18 Apr 2019 04:35:04 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/11D77/production/_106497037_roofofcollege.png"/>
+        </item>
+        <item>
+            <title><![CDATA[Should bookshops profit from sales of Victor Hugo's novel?]]></title>
+            <description><![CDATA[Publishers of Victor Hugo's iconic Hunchback novel are asked to contribute to the restoration fund.]]></description>
+            <link>https://www.bbc.co.uk/news/world-europe-47965174</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-europe-47965174</guid>
+            <pubDate>Wed, 17 Apr 2019 13:45:53 GMT</pubDate>
+            <media:thumbnail width="2048" height="1152" url="http://c.files.bbci.co.uk/DAB4/production/_106488955_hi003466120.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Close up - a look inside the fire-damaged cathedral]]></title>
+            <description><![CDATA[The scale of the destruction is still unclear, with experts saying reconstruction will take decades.]]></description>
+            <link>https://www.bbc.co.uk/news/world-europe-47959379</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-europe-47959379</guid>
+            <pubDate>Wed, 17 Apr 2019 09:16:09 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/086E/production/_106485120_gettyimages-1137665172.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Notre-Dame fire: How well prepared are UK cathedrals?]]></title>
+            <description><![CDATA[How well prepared are historic buildings on this side of the Channel for a fire?]]></description>
+            <link>https://www.bbc.co.uk/news/uk-47952705</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-47952705</guid>
+            <pubDate>Wed, 17 Apr 2019 12:11:19 GMT</pubDate>
+            <media:thumbnail width="2048" height="1152" url="http://c.files.bbci.co.uk/B318/production/_106484854_mediaitem106484853.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Why the blaze was so difficult to tackle]]></title>
+            <description><![CDATA[Experts tell the BBC of the challenges fire crews faced as they battled to save the historic building.]]></description>
+            <link>https://www.bbc.co.uk/news/world-europe-47945471</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-europe-47945471</guid>
+            <pubDate>Tue, 16 Apr 2019 23:32:21 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/093F/production/_106476320_hi053456211.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[The grief that comes from lost buildings]]></title>
+            <description><![CDATA[People around the world share emotional stories about seeing important cultural sights destroyed.]]></description>
+            <link>https://www.bbc.co.uk/news/world-47952725</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-47952725</guid>
+            <pubDate>Tue, 16 Apr 2019 23:46:56 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/12F1D/production/_106479577_haiti.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Notre-Dame: The story of the fire in graphics and images]]></title>
+            <description><![CDATA[How the Notre-Dame fire spread and the damage it caused, shown in graphics and images.]]></description>
+            <link>https://www.bbc.co.uk/news/world-europe-47947425</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-europe-47947425</guid>
+            <pubDate>Tue, 16 Apr 2019 15:09:41 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/4A17/production/_106476981_notre_dame_promo_976.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Notre-Dame fire: How will the cathedral be restored?]]></title>
+            <description><![CDATA[Experts explain how the 850-year-old building can be saved, after it was ravaged by a major fire.]]></description>
+            <link>https://www.bbc.co.uk/news/world-europe-47952055</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-europe-47952055</guid>
+            <pubDate>Wed, 17 Apr 2019 09:34:03 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/89E1/production/_106479253_mediaitem106479252.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Notre-Dame cathedral: First look inside fire-damaged building]]></title>
+            <description><![CDATA[Search teams are assessing the damage to the 850-year-old Parisian landmark.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-47950205</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-47950205</guid>
+            <pubDate>Tue, 16 Apr 2019 11:04:06 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/9E45/production/_106471504_p076mgyd.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Notre-Dame fire: Paris surveys aftermath of cathedral blaze]]></title>
+            <description><![CDATA[Images from Paris as residents and officials examine the extent of the disastrous fire.]]></description>
+            <link>https://www.bbc.co.uk/news/world-europe-47945465</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-europe-47945465</guid>
+            <pubDate>Tue, 16 Apr 2019 17:55:18 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/16D61/production/_106473539_hi053457850.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA['I helped test a wonder drug - then I was denied it']]></title>
+            <description><![CDATA[When Louise Moorhouse took part in a drug trial she was able to eat normally for the first time in her life.]]></description>
+            <link>https://www.bbc.co.uk/news/stories-47954400</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/stories-47954400</guid>
+            <pubDate>Wed, 17 Apr 2019 00:59:39 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/958F/production/_106478283_louise.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[The mental rigours of being US president]]></title>
+            <description><![CDATA[Some of Trump's predecessors were manic depressives, bipolar and even psychopathic, say experts.]]></description>
+            <link>https://www.bbc.co.uk/news/world-us-canada-47671986</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-us-canada-47671986</guid>
+            <pubDate>Mon, 15 Apr 2019 21:17:26 GMT</pubDate>
+            <media:thumbnail width="1920" height="1080" url="http://c.files.bbci.co.uk/DF94/production/_106463275_presidentmentalillness-indexv2.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Graffiti punished by reading - 'It worked!' says prosecutor]]></title>
+            <description><![CDATA[Two-and-a-half years after five teenagers were sentenced by a court to read a list of books, all are still in education and none has reoffended.]]></description>
+            <link>https://www.bbc.co.uk/news/stories-47936071</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/stories-47936071</guid>
+            <pubDate>Mon, 15 Apr 2019 23:09:01 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/0538/production/_106463310_volunteers161009getty2_9765.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[The footballer, the Saudi prince and the proposition]]></title>
+            <description><![CDATA[When a Saudi prince told a Mancunian footballer his feelings, the footballer fled the country.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-47258619</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-47258619</guid>
+            <pubDate>Sat, 13 Apr 2019 23:23:26 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/1287F/production/_106230957_saudi_promo_alamy.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Islamic State: The women and children no-one wants]]></title>
+            <description><![CDATA[Al-Hol is a Syrian camp that has grown to 70,000 people - inside are the women and children of the jihadist group Islamic State (IS).]]></description>
+            <link>https://www.bbc.co.uk/news/world-middle-east-47867673</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-middle-east-47867673</guid>
+            <pubDate>Thu, 11 Apr 2019 23:01:08 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/14447/production/_106351038_img-20190408-wa0020.jpg"/>
+        </item>
+    </channel>
+</rss>

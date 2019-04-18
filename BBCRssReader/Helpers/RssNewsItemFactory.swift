@@ -24,7 +24,7 @@ struct RssItemFactory {
         return xmlIndexers.map { createRssItem(from: $0) }
     }
 
-    private func createRssItem(from xmlIndexer: XMLIndexer) -> RssNewsItem {
+    func createRssItem(from xmlIndexer: XMLIndexer) -> RssNewsItem {
         let rssItem = RssNewsItem(context: coreDataStack.writeContext)
         rssItem.title = xmlIndexer["title"].element?.text
         rssItem.summary = xmlIndexer["description"].element?.text
