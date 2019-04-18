@@ -50,6 +50,7 @@
 		C8CB98C92260D08100443DDD /* SetRssFeedItemAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CB98C82260D08100443DDD /* SetRssFeedItemAction.swift */; };
 		C8CB98CC2260DAE200443DDD /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CB98CB2260DAE200443DDD /* String+Extensions.swift */; };
 		C8CB98CE2260E9B300443DDD /* ZoomedImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CB98CD2260E9B300443DDD /* ZoomedImageViewController.swift */; };
+		C8DB10A52268CC76009A9A90 /* StateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DB10A42268CC76009A9A90 /* StateTests.swift */; };
 		C8F3B7682268745600332F8A /* CoreDataStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F3B7672268745600332F8A /* CoreDataStackTests.swift */; };
 		C8F3B76A2268989200332F8A /* RssNewsItemFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F3B7692268989200332F8A /* RssNewsItemFactoryTests.swift */; };
 		C8F3B76D22689AFB00332F8A /* OneRssItemXml.xml in Resources */ = {isa = PBXBuildFile; fileRef = C8F3B76C22689AFB00332F8A /* OneRssItemXml.xml */; };
@@ -127,6 +128,7 @@
 		C8CB98C82260D08100443DDD /* SetRssFeedItemAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRssFeedItemAction.swift; sourceTree = "<group>"; };
 		C8CB98CB2260DAE200443DDD /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		C8CB98CD2260E9B300443DDD /* ZoomedImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomedImageViewController.swift; sourceTree = "<group>"; };
+		C8DB10A42268CC76009A9A90 /* StateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTests.swift; sourceTree = "<group>"; };
 		C8F3B7672268745600332F8A /* CoreDataStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackTests.swift; sourceTree = "<group>"; };
 		C8F3B7692268989200332F8A /* RssNewsItemFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RssNewsItemFactoryTests.swift; sourceTree = "<group>"; };
 		C8F3B76C22689AFB00332F8A /* OneRssItemXml.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = OneRssItemXml.xml; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 		C8C25A53225B8FD00047EE2F /* BBCRssReaderTests */ = {
 			isa = PBXGroup;
 			children = (
+				C8DB10A32268CC55009A9A90 /* StateTests */,
 				C8F3B7662268742F00332F8A /* HelpersTests */,
 				C8C25A56225B8FD00047EE2F /* Info.plist */,
 				C8F3B76C22689AFB00332F8A /* OneRssItemXml.xml */,
@@ -356,6 +359,14 @@
 				C8CB98CB2260DAE200443DDD /* String+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C8DB10A32268CC55009A9A90 /* StateTests */ = {
+			isa = PBXGroup;
+			children = (
+				C8DB10A42268CC76009A9A90 /* StateTests.swift */,
+			);
+			path = StateTests;
 			sourceTree = "<group>";
 		};
 		C8F3B7662268742F00332F8A /* HelpersTests */ = {
@@ -647,6 +658,7 @@
 				C8F3B7682268745600332F8A /* CoreDataStackTests.swift in Sources */,
 				C8F3B7712268ABA800332F8A /* DataFormattersTests.swift in Sources */,
 				C8F3B76A2268989200332F8A /* RssNewsItemFactoryTests.swift in Sources */,
+				C8DB10A52268CC76009A9A90 /* StateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
