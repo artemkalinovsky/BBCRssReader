@@ -65,12 +65,12 @@ final class CoreDataStack {
         return container
     }()
 
-    func fetch<T: NSManagedObject>(_ type: T.Type, predicate: NSPredicate? = nil) -> [T]? {
     func fetch<T: NSManagedObject>(_ type: T.Type,
                                    predicate: NSPredicate? = nil,
                                    fetchBatchSize: Int? = nil) -> [T]? {
         let fetchRequest = T.fetchRequest()
         fetchRequest.predicate = predicate
+        if let fetchBatchSize = fetchBatchSize {
             fetchRequest.fetchBatchSize = fetchBatchSize
         }
         let feched = try? viewContext.fetch(fetchRequest)
