@@ -25,7 +25,7 @@ final class BBCRssLocalService: RssLocalService {
         if let searchString = searchString {
             predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchString)
         }
-        completion(coreDataStack.fetch(RssNewsItem.self, predicate: predicate, fetchBatchSize: limit), nil)
+        completion(coreDataStack.fetch(RssNewsItem.self, predicate: predicate, fetchLimit: limit), nil)
     }
 
 }

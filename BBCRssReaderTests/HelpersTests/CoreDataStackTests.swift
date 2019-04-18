@@ -104,7 +104,7 @@ class CoreDataStackTests: XCTestCase {
         }
     }
 
-    func testFetchRssNewsFeddItemsWithPredicate() {
+    func testFetchRssNewsFeedItemsWithPredicate() {
         guard let writeContext = coreDataStack?.writeContext else {
             XCTFail("Write ManagaedObjectContext should not be nil.")
             return
@@ -127,6 +127,39 @@ class CoreDataStackTests: XCTestCase {
                         let predicate = NSPredicate(format: "title CONTAINS[cd] %@", "1")
                         let allRssNewsFeedItems = self?.coreDataStack?.fetch(RssNewsItem.self,
                                                                              predicate: predicate) ?? []
+                        XCTAssertTrue(allRssNewsFeedItems.count == 1)
+                        return true
+        }
+
+        coreDataStack?.save()
+
+        waitForExpectations(timeout: 5.0) { error in
+            XCTAssertNil(error, "Save did not occur")
+        }
+    }
+
+    func testFetchRssNewsFeedItemsWithLimit() {
+        guard let writeContext = coreDataStack?.writeContext else {
+            XCTFail("Write ManagaedObjectContext should not be nil.")
+            return
+        }
+        guard let viewContext = coreDataStack?.viewContext else {
+            XCTFail("View ManagaedObjectContext should not be nil.")
+            return
+        }
+
+        let rssNewsItem1 = RssNewsItem(context: writeContext)
+        rssNewsItem1.title = "Test Title1"
+        rssNewsItem1.summary = "Test Summary1"
+
+        let rssNewsItem2 = RssNewsItem(context: writeContext)
+        rssNewsItem2.title = "Test Title2"
+        rssNewsItem2.summary = "Test Summary2"
+
+        expectation(forNotification: .NSManagedObjectContextDidSave,
+                    object: viewContext) { [weak self] (notification) -> Bool in
+                        let allRssNewsFeedItems = self?.coreDataStack?.fetch(RssNewsItem.self,
+                                                                             fetchLimit: 1) ?? []
                         XCTAssertTrue(allRssNewsFeedItems.count == 1)
                         return true
         }
