@@ -32,12 +32,17 @@ final class RssFeedItemDetailsViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         store.unsubscribe(self)
+        guard store.state.routingState.navigationState == .rssItemDetails else {
+            return
+        }
+        store.dispatch(RoutingAction(destination: .rssItemsFeed))
     }
     
     @IBAction private func actionBarButtonItemPressed(_ sender: UIBarButtonItem) {
         guard let url = store.state.rssFeedItemDetailsState.rssItem?.url else { return }
         let safariViewController = SFSafariViewController(url: url)
         safariViewController.delegate = self
+        store.dispatch(RoutingAction(destination: .safariViewController))
         present(safariViewController, animated: true)
     }
 
@@ -61,7 +66,6 @@ extension RssFeedItemDetailsViewController: SFSafariViewControllerDelegate {
 
     func safariViewController(_ controller: SFSafariViewController,
                               didCompleteInitialLoad didLoadSuccessfully: Bool) {
-        store.dispatch(RoutingAction(destination: .safariViewController))
     }
 
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {

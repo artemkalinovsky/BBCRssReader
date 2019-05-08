@@ -29,6 +29,7 @@ final class ZoomedImageViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         store.unsubscribe(self)
+        store.dispatch(RoutingAction(destination: .rssItemsFeed))
     }
 
     @IBAction private func touchUpInsideCloseButton(_ sender: UIButton) {
