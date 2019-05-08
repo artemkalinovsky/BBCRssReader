@@ -15,11 +15,6 @@ final class RssFeedItemDetailsViewController: UIViewController {
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var summaryLabel: UILabel!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        store.dispatch(setRssFeedItem)
-    }
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         store.subscribe(self) {

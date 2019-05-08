@@ -47,7 +47,6 @@
 		C8CB98C32260CD8400443DDD /* RssFeedItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CB98C22260CD8400443DDD /* RssFeedItemDetailsViewController.swift */; };
 		C8CB98C52260CEBE00443DDD /* RssFeedItemDetailsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CB98C42260CEBE00443DDD /* RssFeedItemDetailsState.swift */; };
 		C8CB98C72260CF3B00443DDD /* RssFeedItemReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CB98C62260CF3B00443DDD /* RssFeedItemReducer.swift */; };
-		C8CB98C92260D08100443DDD /* SetRssFeedItemAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CB98C82260D08100443DDD /* SetRssFeedItemAction.swift */; };
 		C8CB98CC2260DAE200443DDD /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CB98CB2260DAE200443DDD /* String+Extensions.swift */; };
 		C8CB98CE2260E9B300443DDD /* ZoomedImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CB98CD2260E9B300443DDD /* ZoomedImageViewController.swift */; };
 		C8DB10A52268CC76009A9A90 /* StateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DB10A42268CC76009A9A90 /* StateTests.swift */; };
@@ -125,7 +124,6 @@
 		C8CB98C22260CD8400443DDD /* RssFeedItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RssFeedItemDetailsViewController.swift; sourceTree = "<group>"; };
 		C8CB98C42260CEBE00443DDD /* RssFeedItemDetailsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RssFeedItemDetailsState.swift; sourceTree = "<group>"; };
 		C8CB98C62260CF3B00443DDD /* RssFeedItemReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RssFeedItemReducer.swift; sourceTree = "<group>"; };
-		C8CB98C82260D08100443DDD /* SetRssFeedItemAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRssFeedItemAction.swift; sourceTree = "<group>"; };
 		C8CB98CB2260DAE200443DDD /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		C8CB98CD2260E9B300443DDD /* ZoomedImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomedImageViewController.swift; sourceTree = "<group>"; };
 		C8DB10A42268CC76009A9A90 /* StateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTests.swift; sourceTree = "<group>"; };
@@ -230,7 +228,6 @@
 			isa = PBXGroup;
 			children = (
 				C8CB98C02260B5D400443DDD /* RoutingAction.swift */,
-				C8CB98C82260D08100443DDD /* SetRssFeedItemAction.swift */,
 				C8A3793A2264B54400ADD83E /* RssFeedAction.swift */,
 			);
 			path = Actions;
@@ -635,7 +632,6 @@
 				C8CB98C72260CF3B00443DDD /* RssFeedItemReducer.swift in Sources */,
 				C83E9B35225E3931001779E2 /* TableDataSource.swift in Sources */,
 				C8A379422264BABD00ADD83E /* Loadable.swift in Sources */,
-				C8CB98C92260D08100443DDD /* SetRssFeedItemAction.swift in Sources */,
 				C83E9B2E225E2130001779E2 /* RssServicesState.swift in Sources */,
 				C8254144225CCF83008127C4 /* RssService.swift in Sources */,
 				C8254154225CED03008127C4 /* RssNewsItem+CoreDataProperties.swift in Sources */,

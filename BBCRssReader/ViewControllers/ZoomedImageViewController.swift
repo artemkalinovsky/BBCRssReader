@@ -12,11 +12,6 @@ final class ZoomedImageViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        store.dispatch(setRssFeedItem)
-    }
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         store.subscribe(self) {

@@ -14,6 +14,7 @@ func fetchRssFeed() -> Middleware {
      return { fetchRssFeed(action: $0, context: $1) }
 }
 
+// TODO: - Convert Action to RssFeedAction, Rss item editing
 private func fetchRssFeed(action: Action, context: MiddlewareContext<AppState>) -> Action? {
 
     guard let rssFeedAction = action as? RssFeedAction else {
