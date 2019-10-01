@@ -1,8 +1,10 @@
 PODS:
-  - Alamofire (4.8.2)
-  - Kingfisher (5.3.1)
-  - ReSwift (4.1.1)
-  - SWXMLHash (4.9.0)
+  - Alamofire (4.9.0)
+  - Kingfisher (5.8.1):
+    - Kingfisher/Core (= 5.8.1)
+  - Kingfisher/Core (5.8.1)
+  - ReSwift (5.0.0)
+  - SWXMLHash (5.0.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -11,18 +13,18 @@ DEPENDENCIES:
   - SWXMLHash
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Alamofire
     - Kingfisher
     - ReSwift
     - SWXMLHash
 
 SPEC CHECKSUMS:
-  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
-  ReSwift: d925be0033558f55bd73d92869961230dfe19d52
-  SWXMLHash: 87b0006848a548b7f9485b40bc71721b3ae39add
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  Kingfisher: de969e451c81ca6c07a454bc36fea84b8b08c3c7
+  ReSwift: 628f1a9b3ee52e3b3ca2a644435472fd77afafe1
+  SWXMLHash: 9cc0c2e4807926c74377724aa8722ee5707a0485
 
 PODFILE CHECKSUM: 5254dc8b2d95f443ddb472f1452d05f8bfc919dc
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.8.1

@@ -8,7 +8,9 @@
 
 import ReSwift
 
-let store = Store<AppState>(reducer: appReducer, state: nil, middleware: [createMiddleware(fetchRssFeed())])
+let store = Store<AppState>(reducer: appReducer,
+                            state: nil,
+                            middleware: [createMiddleware(fetchRssFeed())])
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
